@@ -2,26 +2,93 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: "kano";
+  src: url("../assets/font/Kano.otf");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@layer components {
+.resume_btn,
+.resume_btn:link,
+.resume_btn:visited {
+  @apply text-[#FB2576] text-[1.3rem] tracking-widest uppercase min-w-[100px] max-w-[60%] relative transition-all duration-[0.2s] ease-[cubic-bezier(0.455,0.03,0.515,0.955)] mx-auto my-0 border-2 border-solid border-transparent;
+}
+.resume_btn:after,
+.resume_btn:before,
+.resume_btn:link:after,
+.resume_btn:link:before,
+.resume_btn:visited:after,
+.resume_btn:visited:before {
+  @apply content-[""] absolute left-[-1em] h-[2.25rem] w-0 border transition-[inherit] border-solid border-[#FB2576] -top-0.5;
+}
+.resume_btn:after,
+.resume_btn:link:after,
+.resume_btn:visited:after {
+  @apply right-[-1em] left-auto;
+}
+.resume_btn:hover,
+.resume_btn:link:hover,
+.resume_btn:visited:hover {
+  @apply border-[#FB2576];
+  transition: border-color 0.2s 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.resume_btn:hover:after,
+.resume_btn:hover:before,
+.resume_btn:link:hover:after,
+.resume_btn:link:hover:before,
+.resume_btn:visited:hover:after,
+.resume_btn:visited:hover:before {
+  @apply transition-all duration-[0.2s] ease-[cubic-bezier(0.455,0.03,0.515,0.955)] -right-0.5;
+}
+.resume_btn:hover:before,
+.resume_btn:link:hover:before,
+.resume_btn:visited:hover:before {
+  @apply -left-0.5 right-auto;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+#menuToggle {
+  @apply relative z-[1] select-none;
+  -webkit-user-select: none;
+}
+
+#menuToggle span {
+  @apply block w-[33px] h-1 relative z-[1] origin-[4px_0px] mb-[5px] rounded-[3px];
+  background: #fb2576;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle input {
+  @apply block w-full h-full absolute cursor-pointer opacity-0 z-[2];
+  /* hide this */
+  /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+#menuToggle input:checked ~ span {
+  @apply opacity-100 rotate-45 translate-x-0.5 -translate-y-px;
+}
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  @apply opacity-0 rotate-0 scale-[0.2];
+}
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  @apply -rotate-45 translate-x-0 -translate-y-px;
+}
+
+#menu {
+  @apply absolute w-[300px] mt-[-100px] ml-[-150px] list-none origin-[100%_0%] transition-transform duration-[0.5s] ease-[cubic-bezier(0.77,0.2,0.05,1)] mr-0 mb-0 pt-[125px] p-[50px];
+  background: #1c1c1c;
+  -webkit-font-smoothing: antialiased;
+  /* Changed from '0% 0%' to '100% 0%' */
+  transform: translate(100%, 0);
+  /* Changed from 'translate(-100%, 0)' to 'translate(100%, 0)' */
+}
+#menu li {
+  @apply text-[22px] px-0 py-2.5;
+}
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+
 }
