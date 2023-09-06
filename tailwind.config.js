@@ -14,7 +14,7 @@ module.exports = {
       colors: {
         dark_bg: "#1C1C1C",
         primary: "#FB2576",
-        secondary: "#3F0071",
+        secondary: "#8E05C2",
       },
       ham_transition: {
         transition: "color 0.3s ease",
@@ -53,6 +53,17 @@ module.exports = {
           "60%": { transform: "scaleX(1)" },
           "100%": { transform: "scaleX(0)" },
         },
+        quoteJump: {
+          "0%": {
+            transform: "scale(1)",
+          },
+          "50%": {
+            transform: "scale(1.3)",
+          },
+          "100%": {
+            transform: "scale(1)",
+          },
+        },
       },
       animation: {
         floatUp: "floatUp 1s ease-in-out",
@@ -61,6 +72,7 @@ module.exports = {
         finalFade: "finalFade 1s ease-in-out",
         revealText: "revealText 1s linear",
         revealerText: "revealerText 1s linear",
+        quoteJump: "quoteJump 2s infinite",
       },
     },
   },

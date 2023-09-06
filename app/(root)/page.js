@@ -1,6 +1,7 @@
 import Navbar from "@/components/navbar.jsx";
 import { Header, About, Skills, Projects, Contact, Footer } from "@/containers";
 import Invite from "@/components/invite.jsx";
+import Quotes from "@/components/quote.jsx";
 
 export default function Home() {
   return (
@@ -20,12 +21,15 @@ export default function Home() {
           <div className="light x9"></div>
         </div>
       </div>
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Invite />
-      <Footer />
+      <div className=" relative">
+        <Quotes quote="Soothing presence, nurtures growth" />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Invite />
+        <Footer />
+      </div>
     </main>
   );
 }

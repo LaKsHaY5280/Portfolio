@@ -222,7 +222,7 @@
 }
 
 .head_text h1 {
-  @apply py-5 inline-flex;
+  @apply py-5 inline-flex font-bold;
 }
 
 .head_img img {
