@@ -228,3 +228,60 @@
 .head_img img {
   @apply  max-lg:h-[600px] max-lg:w-[600px] ;
 }
+
+.verticle_bg {
+  @apply -rotate-90 whitespace-nowrap text-7xl -m-28 opacity-50 font-bold;
+}
+
+.animated_underline {
+  @apply relative after:content-[""] after:absolute after:bottom-[0.25em] after:h-px after:transition-all after:duration-[ease] after:delay-[0.2s] after:inset-x-2/4 hover:after:h-0.5 hover:after:inset-x-0 before:absolute before:-translate-x-full before:text-[#eee] before:opacity-30 before:font-thin before:text-[0.8em] before:-left-2.5;
+}
+.animated_underline:after {
+  background: currentColor;
+}
+
+
+/* Targeting the 'about' class */
+.about {
+  @apply flex flex-1 justify-between items-center;
+}
+
+/* Targeting the first child of the second div inside 'about' class */
+.about > div:nth-child(2) > div:nth-child(1) {
+  @apply text-5xl font-bold whitespace-nowrap py-5;
+}
+
+/* Targeting the second child of the second div inside 'about' class */
+.about > div:nth-child(2) > div:nth-child(2) {
+  @apply text-3xl font-semibold py-4;
+}
+
+/* Targeting the span inside the second div inside 'about' class */
+.about > div:nth-child(2) span {
+  @apply text-xl font-semibold py-3;
+}
+
+/* Targeting the p inside the second div inside 'about' class */
+.about > div p {
+  @apply text-lg py-2;
+}
+
+/* Targeting the span inside p inside the second div inside 'about' class */
+.about > div p span {
+  @apply animated_underline font-bold;
+}
+
+/* Targeting the third child div inside 'about' class */
+.about > div:nth-child(3) {
+  @apply px-28;
+}
+
+.lang_icons {
+  @apply p-4 flex flex-wrap justify-between items-center content-between;
+}
+.lang_icons img {
+  @apply flex flex-wrap justify-between items-center content-between;
+}
+.lang_icons button {
+  @apply ml-2 mr-0  ;
+}

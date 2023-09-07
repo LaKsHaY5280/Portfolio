@@ -17,7 +17,7 @@ const Navbar = () => {
           <ul className=" flex justify-end items-center max-md:hidden">
             {navlinks.map((link) => (
               <li key={link.label} className=" text-slate-100 mx-4">
-                <a href={link.url}>{link.label}</a>
+                <a href={"#" + link.url}>{link.label}</a>
               </li>
             ))}
           </ul>
