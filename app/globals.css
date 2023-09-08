@@ -1,6 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 
 @font-face {
   font-family: "kano";
@@ -12,7 +13,7 @@
 .resume_btn,
 .resume_btn:link,
 .resume_btn:visited {
-  @apply text-[#FB2576] text-[1.3rem] tracking-widest uppercase min-w-[100px] max-w-[60%] relative transition-all duration-[0.2s] ease-[cubic-bezier(0.455,0.03,0.515,0.955)] mx-auto my-0 border-2 border-solid border-transparent;
+  @apply text-secondary text-[1.3rem] tracking-widest uppercase min-w-[100px] max-w-[60%] relative transition-all duration-[0.2s] ease-[cubic-bezier(0.455,0.03,0.515,0.955)] mx-auto my-0 border-2 border-solid border-transparent;
 }
 .resume_btn:after,
 .resume_btn:before,
@@ -20,7 +21,7 @@
 .resume_btn:link:before,
 .resume_btn:visited:after,
 .resume_btn:visited:before {
-  @apply content-[""] absolute left-[-1em] h-[2.25rem] w-0 border transition-[inherit] border-solid border-[#FB2576] -top-0.5;
+  @apply content-[""] absolute left-[-1em] h-[2.24rem] w-0 border transition-[inherit] border-solid border-[#FB2576] -top-0.5;
 }
 .resume_btn:after,
 .resume_btn:link:after,
@@ -101,12 +102,12 @@
 
 
 .bg_head {
-  @apply relative h-screen font-thin overflow-y-hidden animate-[fadeIn_1s_ease-out] m-0;
-  background: radial-gradient(
-    circle,
-    rgba(68, 31, 47, 1) 47%,
-    rgba(28, 28, 28, 1) 100%
-  );
+  @apply relative h-full p-10 font-thin overflow-y-hidden animate-[fadeIn_1s_ease-out] m-0;
+  background: rgb(63,0,113);
+  background: -moz-radial-gradient(circle, rgba(63,0,113,1) 47%, rgba(28,28,28,1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(63,0,113,1) 47%, rgba(28,28,28,1) 100%);
+  background: radial-gradient(circle, rgba(63,0,113,1) 47%, rgba(28,28,28,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3f0071",endColorstr="#1c1c1c",GradientType=1);
 }
 
 .light {
@@ -240,48 +241,89 @@
   background: currentColor;
 }
 
-
-/* Targeting the 'about' class */
 .about {
   @apply flex flex-1 justify-between items-center;
 }
 
-/* Targeting the first child of the second div inside 'about' class */
 .about > div:nth-child(2) > div:nth-child(1) {
   @apply text-5xl font-bold whitespace-nowrap py-5;
 }
 
-/* Targeting the second child of the second div inside 'about' class */
 .about > div:nth-child(2) > div:nth-child(2) {
   @apply text-3xl font-semibold py-4;
 }
 
-/* Targeting the span inside the second div inside 'about' class */
 .about > div:nth-child(2) span {
   @apply text-xl font-semibold py-3;
 }
 
-/* Targeting the p inside the second div inside 'about' class */
 .about > div p {
   @apply text-lg py-2;
 }
 
-/* Targeting the span inside p inside the second div inside 'about' class */
 .about > div p span {
-  @apply animated_underline font-bold;
+  @apply animated_underline font-bold text-primary;
 }
 
-/* Targeting the third child div inside 'about' class */
 .about > div:nth-child(3) {
   @apply px-28;
 }
 
+.about_resume{
+  @apply px-4 my-10;
+}
+
 .lang_icons {
-  @apply p-4 flex flex-wrap justify-between items-center content-between;
+  @apply p-4 flex flex-wrap justify-around items-center content-between gap-10;
 }
 .lang_icons img {
   @apply flex flex-wrap justify-between items-center content-between;
 }
 .lang_icons button {
   @apply ml-2 mr-0  ;
+}
+
+.skills {
+  @apply flex justify-center items-center flex-col gap-10;
+}
+
+.card {
+  @apply flex flex-wrap justify-center items-center text-[62.5%];
+}
+.card_wrap {
+  @apply flex flex-wrap justify-center items-center m-10 cursor-pointer ;
+  transform-style: preserve-3d;
+  transform: perspective(100rem);
+}
+.card_container {
+  @apply w-full h-auto bg-dark_bg text-primary text-center border border-primary flex flex-col justify-center items-center relative bg-[position:var(--bX)_var(--bY)] bg-[40rem_auto] shadow-[0_0_3rem_0.5rem_hsla(0,0%,0%,0.2)] transition-transform duration-[0.6s] delay-[1s] p-16 rounded-[1.6rem] border-solid before:border-l-0 before:border-b-0 before:right-8 before:top-8 after:border-r-0 after:border-t-0 after:left-8 after:bottom-8;
+  --rX: 0;
+  --rY: 0;
+  --bX: 50%;
+  --bY: 80%;
+  transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+ }
+.card_container::before,
+.card_container::after {
+  @apply content-[""] w-8 h-8 border absolute z-[2] opacity-30 transition-[0.3s] border-solid border-white;
+}
+.card_container--active {
+  @apply transition-none;
+}
+ /* .card_container--2 {
+  @apply mx-5;
+} */
+/* .card_container--3 {
+  @apply hue-rotate-[160deg] saturate-[140%];
+} */ 
+.card_container h2 {
+  @apply text-[hsla(0,0%,100%,0.6)] text-[2.2rem];
+}
+.card_wrap:hover .card_container::before,
+.card_wrap:hover .card_container::after {
+  @apply w-[calc(100%_-_4rem)] h-[calc(100%_-_4rem)];
+}
+
+.card_container li {
+  @apply pt-2 text-2xl;
 }

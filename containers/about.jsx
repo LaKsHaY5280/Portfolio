@@ -62,17 +62,8 @@ const About = () => {
             Ready to embark on a digital adventure? Reach out to me with any
             questions or requirements. Together, we can breathe life into your
             vision.
-          </p>{" "}
-          <div className=" lang_icons">
-            <Image src={html} alt="logo" width={40} />
-            <Image src={css} alt="logo" width={40} />
-            <Image src={js} alt="logo" width={40} />
-            <Image src={typescript} alt="logo" width={40} />
-            <Image src={react} alt="logo" width={40} />
-            <Image src={nextjs} alt="logo" width={40} />
-            <Image src={nodejs} alt="logo" width={40} />
-            <Image src={mongodb} alt="logo" width={40} />
-            <Image src={expressjs48} alt="logo" width={40} />
+          </p>
+          <div className=" about_resume">
             <button className="resume_btn">Resume</button>
           </div>
         </div>

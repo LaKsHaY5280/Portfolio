@@ -23,7 +23,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      <div className=" px-4">
+      <div className=" px-4 flex justify-end items-center">
         <button className="resume_btn">Resume</button>
       </div>
       <div className=" flex justify-end items-center md:hidden">
