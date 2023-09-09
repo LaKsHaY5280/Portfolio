@@ -24,7 +24,7 @@ const About = () => {
       <div className=" about flex flex-1 justify-between items-center">
         <div className=" verticle_bg">ABOUT ME</div>
         <div>
-          <div className=" animated_underline">
+          <div className=" header animated_underline">
             Chronicle of the self: A glimpse within
           </div>
           <div>Lakshay Goyal - Web Developer</div>

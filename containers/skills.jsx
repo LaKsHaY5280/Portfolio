@@ -19,6 +19,7 @@ import Image from "next/image";
 const Skills = () => {
   return (
     <div id="skill" className=" bg_head skills ">
+      <div className=" verticle_bg">SKILLS</div>
       <div className="lang_icons">
         <Image src={html} alt="logo" width={40} />
         <Image src={css} alt="logo" width={40} />
