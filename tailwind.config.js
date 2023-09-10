@@ -64,6 +64,26 @@ module.exports = {
             transform: "scale(1)",
           },
         },
+        "btn-anim1": {
+          "0%": { left: "-100%" },
+          "50%": { left: "100%" },
+          "100%": { left: "100%" },
+        },
+        "btn-anim2": {
+          "0%": { top: "-100%" },
+          "50%": { top: "100%" },
+          "100%": { top: "100%" },
+        },
+        "btn-anim3": {
+          "0%": { right: "-100%" },
+          "50%": { right: "100%" },
+          "100%": { right: "100%" },
+        },
+        "btn-anim4": {
+          "0%": { bottom: "-100%" },
+          "50%": { bottom: "100%" },
+          "100%": { bottom: "100%" },
+        },
       },
       animation: {
         floatUp: "floatUp 1s ease-in-out",

@@ -242,14 +242,14 @@
 }
 
 .about {
-  @apply flex flex-1 justify-between items-center;
+  @apply w-full flex flex-1 justify-between items-center;
 }
 
 .header {
   @apply text-5xl font-bold whitespace-nowrap py-5  text-slate-100;
 }
 
-.about > div:nth-child(2) > div:nth-child(2) {
+.about > div:nth-child(2) > div:nth-child(2)  {
   @apply text-3xl font-semibold py-4;
 }
 
@@ -284,7 +284,7 @@
 }
 
 .skills {
-  @apply flex justify-center items-center flex-col gap-10;
+  @apply w-full flex justify-center items-center flex-col gap-10;
 }
 
 .skills .verticle_bg {
@@ -417,9 +417,78 @@
 }
 
 .proj {
-  @apply relative flex justify-center items-center gap-10;
+  @apply relative w-full flex justify-center items-center gap-10;
 }
 
 .proj .verticle_bg {
   @apply absolute left-10 top-auto bottom-auto;
+}
+
+.contact {
+  @apply w-full flex flex-1 justify-between items-center text-slate-100;
+}
+
+.contact > div:nth-child(2) > div:nth-child(2)  {
+  @apply text-3xl font-semibold py-4 text-slate-100;
+}
+
+
+.login-box {
+  @apply box-border shadow-[0_15px_25px_rgba(0,0,0,0.6)] p-10 rounded-[10px] left-2/4 top-2/4;
+  background: rgba(0, 0, 0, 0.5);
+}
+.login-box h2 {
+  @apply text-white text-center mt-0 mb-[30px] mx-0 p-0;
+}
+.login-box .user-box {
+  @apply relative;
+}
+
+.login-box .user-box input {
+  @apply w-1/2 text-base text-white mb-[30px] px-0 py-2.5 border-b-white border-[none] border-b border-solid;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box textarea {
+  @apply w-full text-base text-white mb-[30px] px-0 py-2.5 border-b-white border-[none] border-b border-solid;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  @apply absolute text-base text-white pointer-events-none transition-[0.5s] px-0 py-2.5 left-0 top-0;
+}
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label,
+.login-box .user-box textarea:focus ~ label,
+.login-box .user-box textarea:valid ~ label {
+  @apply text-primary text-xs left-0 -top-5;
+}
+.login-box form a {
+  @apply relative inline-block text-primary text-base no-underline uppercase overflow-hidden transition-[0.5s] tracking-[4px] mt-10 px-5 py-2.5;
+}
+.login-box a:hover {
+  @apply text-white shadow-[0_0_5px_#8E05C2,0_0_25px_#8E05C2,0_0_50px_#8E05C2,0_0_100px_#8E05C2] rounded-[5px];
+  background: #FB2576;
+}
+.login-box a span {
+  @apply absolute block;
+}
+.login-box a span:nth-child(1) {
+  @apply w-full h-0.5 animate-[btn-anim1_1s_linear_infinite] -left-full top-0;
+  background: linear-gradient(90deg, transparent, #8E05C2);
+}
+.login-box a span:nth-child(2) {
+  @apply w-0.5 h-full animate-[btn-anim2_1s_linear_infinite] right-0 -top-full;
+  background: linear-gradient(180deg, transparent, #8E05C2);
+  animation-delay: 0.25s;
+}
+.login-box a span:nth-child(3) {
+  @apply w-full h-0.5 animate-[btn-anim3_1s_linear_infinite] -right-full bottom-0;
+  background: linear-gradient(270deg, transparent, #8E05C2);
+  animation-delay: 0.5s;
+}
+.login-box a span:nth-child(4) {
+  @apply w-0.5 h-full animate-[btn-anim4_1s_linear_infinite] left-0 -bottom-full;
+  background: linear-gradient(360deg, transparent, #8E05C2);
+  animation-delay: 0.75s;
 }
