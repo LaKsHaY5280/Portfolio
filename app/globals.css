@@ -242,18 +242,22 @@
 }
 
 .about {
-  @apply w-full flex flex-1 justify-between items-center;
+  @apply w-full flex flex-1 justify-between items-center max-lg:flex-col max-lg:pr-24 max-lg:overflow-hidden;
 }
 
 .header {
-  @apply text-5xl font-bold whitespace-nowrap py-5  text-slate-100;
+  @apply text-5xl font-bold py-5  text-slate-100;
 }
 
-.about > div:nth-child(2) > div:nth-child(2)  {
+.about > div:nth-child(1) > div:nth-child(2)  {
   @apply text-3xl font-semibold py-4;
 }
 
-.about > div:nth-child(2) span {
+.about > div {
+  @apply w-[inherit];
+}
+
+.about > div:nth-child(1) span {
   @apply text-xl font-semibold py-3;
 }
 
@@ -265,13 +269,17 @@
   @apply animated_underline font-bold text-primary;
 }
 
-.about > div:nth-child(3) {
+.about > div:nth-child(2) {
   @apply px-28;
 }
 
 .about_resume{
-  @apply px-4 my-10;
+  @apply px-4 my-10 max-lg:px-7;
 }
+
+/* .my_img {
+  @apply max-lg:w-fit
+} */
 
 .lang_icons {
   @apply p-4 flex flex-wrap justify-around items-center content-between gap-10;
@@ -362,7 +370,7 @@
   }
 }
 .project-content .project-label,.project-contenteven .project-label {
-  @apply text-[#64ffda];
+  @apply text-primary font-semibold text-lg;
   font-family: monospace;
 }
 .project-content .project-title,.project-contenteven .project-title {
@@ -421,7 +429,7 @@
 }
 
 .proj .verticle_bg {
-  @apply absolute left-10 top-auto bottom-auto;
+  @apply absolute left-10 top-auto bottom-auto max-lg:static;
 }
 
 .contact {

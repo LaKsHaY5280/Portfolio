@@ -21,9 +21,9 @@ const About = () => {
       id="about"
       className="bg_head py-5 text-slate-100 flex flex-1 justify-center items-center"
     >
-      <div className=" about flex flex-1 justify-between items-center">
         <div className=" verticle_bg">ABOUT ME</div>
-        <div>
+      <div className=" about">
+        <div className="">
           <div className=" header animated_underline">
             Chronicle of the self: A glimpse within
           </div>
@@ -67,7 +67,7 @@ const About = () => {
             <button className="resume_btn">Resume</button>
           </div>
         </div>
-        <div className="">
+        <div className="myImg">
           <Image src={logo} alt="logo" width={1000} />
         </div>
       </div>
