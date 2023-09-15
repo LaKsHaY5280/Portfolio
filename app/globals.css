@@ -500,3 +500,15 @@
   background: linear-gradient(360deg, transparent, #8E05C2);
   animation-delay: 0.75s;
 }
+
+.footer {
+  @apply flex flex-col justify-around items-center py-10 gap-10;
+}
+
+.footer > div:nth-child(1) {
+  @apply flex flex-col justify-around items-center py-10 gap-10;
+}
+
+.socials {
+  @apply w-full flex justify-around items-center;
+}

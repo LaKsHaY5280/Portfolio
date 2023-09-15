@@ -19,9 +19,9 @@ export default function Home() {
         <Projects />
         <Quotes quote="Touches hearts, inspires collaboration" />
         <Contact />
-        <div className=" float-left">
+        {/* <div className=" float-left">
           <Invite />
-        </div>
+        </div> */}
         <Footer />
       </div>
     </main>
