@@ -10,6 +10,12 @@
 
 
 @layer components {
+
+  .main_body {
+    @apply relative w-full h-screen overflow-x-hidden ;
+  }
+
+
 .resume_btn,
 .resume_btn:link,
 .resume_btn:visited {
@@ -98,6 +104,14 @@
 
 }
 
+.bg_nav {
+  @apply relative font-thin overflow-y-hidden animate-[fadeIn_1s_ease-out] m-0;
+  background: rgb(63,0,113,0.5);
+  background: -moz-radial-gradient(circle, rgba(63,0,113,1) 47%, rgba(28,28,28,1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(63,0,113,1) 47%, rgba(28,28,28,1) 100%);
+  background: radial-gradient(circle, rgba(63,0,113,1) 47%, rgba(28,28,28,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3f0071",endColorstr="#1c1c1c",GradientType=1);
+}
 
 .bg_head {
   @apply relative h-full p-10 font-thin overflow-y-hidden animate-[fadeIn_1s_ease-out] m-0;
@@ -221,7 +235,7 @@
 }
 
 .head_text {
-  @apply absolute top-40 right-40 py-5 text-slate-100 text-5xl max-lg:top-28 max-lg:right-20 max-lg:text-3xl max-[800px]:static;
+  @apply absolute top-40 right-40 py-5 text-slate-100 text-5xl max-[1250px]:top-28 max-[1250px]:right-20 max-[1250px]:text-3xl max-[800px]:static;
 }
 
 .head_text h1 {
@@ -229,7 +243,7 @@
 }
 
 .head_img img {
-  @apply  max-lg:h-[600px] max-lg:w-[600px] ;
+  @apply  max-lg:h-[600px] max-lg:w-[600px] max-[800px]:h-[500px] ;
 }
 
 .verticle_bg {
@@ -523,6 +537,10 @@
 .formbg {
   @apply box-border shadow-[0_15px_25px_rgba(0,0,0,0.6)];
   background: rgba(0, 0, 0, 0.5);
+}
+
+.layout_social {
+  @apply max-[800px]:hidden
 }
 
 .layout_social > div:nth-child(1) {

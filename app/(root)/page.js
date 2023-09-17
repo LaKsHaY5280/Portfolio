@@ -6,9 +6,11 @@ import AnimatedBg from "@/components/animatedBg";
 
 export default function Home() {
   return (
-    <main className=" font-kano w-fit">
+    <main className=" font-kano main_body">
+      <div className=" bg_nav">
       <Navbar />
       <Header />
+      </div>
       <AnimatedBg />
       <div className=" relative">
         <Quotes quote="Soothing presence, nurtures growth" />

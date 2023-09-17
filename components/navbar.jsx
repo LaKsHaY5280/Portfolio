@@ -5,7 +5,7 @@ import Hamburger from "./hamburger";
 
 const Navbar = () => {
   return (
-    <div className=" bg-dark_bg p-5 flex flex-1 justify-center items-center">
+    <div className=" formbg p-5 flex flex-1 justify-center items-center ">
       <div className=" flex flex-1 justify-between items-center">
         <div className=" flex justify-start items-center">
           <Image src={l} alt="L" width={30} height={30} />
