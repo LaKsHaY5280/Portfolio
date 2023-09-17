@@ -61,8 +61,6 @@
 
 #menuToggle input {
   @apply block w-full h-full absolute cursor-pointer opacity-0 z-[2];
-  /* hide this */
-  /* and place it over the hamburger */
   -webkit-touch-callout: none;
 }
 #menuToggle input:checked ~ span {
@@ -218,8 +216,12 @@
 }
 
 
+.head {
+  @apply flex flex-1 justify-between items-center max-[800px]:flex-col;
+}
+
 .head_text {
-  @apply absolute top-40 right-40 py-5 text-slate-100 text-5xl max-lg:top-28 max-lg:right-5 max-lg:text-3xl;
+  @apply absolute top-40 right-40 py-5 text-slate-100 text-5xl max-lg:top-28 max-lg:right-20 max-lg:text-3xl max-[800px]:static;
 }
 
 .head_text h1 {
@@ -231,7 +233,7 @@
 }
 
 .verticle_bg {
-  @apply -rotate-90 whitespace-nowrap text-7xl -m-28 opacity-50 font-bold text-slate-100 ;
+  @apply -rotate-90 whitespace-nowrap text-7xl -m-28 opacity-50 font-bold text-slate-100 max-[800px]:hidden;
 }
 
 .animated_underline {
@@ -364,6 +366,9 @@
 .project-content {
   @apply relative col-[1_/_7] row-span-full z-10;
 }
+.project-contenteven {
+  @apply relative col-[6_/_-1] row-span-full z-10 ;
+}
 @media (max-width: 600px) {
   .project-content,.project-contenteven {
     @apply col-span-full p-10;
@@ -373,6 +378,7 @@
   @apply text-primary font-semibold text-lg;
   font-family: monospace;
 }
+
 .project-content .project-title,.project-contenteven .project-title {
   @apply text-[2rem] text-[#eee] mt-2.5 mb-[30px] mx-0;
 }
@@ -397,6 +403,11 @@
 .project-img {
   @apply relative col-[6_/_-1] row-span-full rounded-sm before:content-[""] before:absolute before:w-full before:h-full before:z-[3] before:mix-blend-screen before:rounded-sm before:inset-0;
 }
+
+.project-imgeven {
+  @apply relative col-[1_/_7] row-span-full z-10 rounded-sm before:content-[""] before:absolute before:w-full before:h-full before:z-[3] before:mix-blend-screen before:rounded-sm before:inset-0;
+}
+
 @media screen and (max-width: 768px) {
   .project-img,.project-imgeven {
     @apply h-full;
@@ -414,14 +425,6 @@
   .project-img img,.project-imgeven img {
     @apply object-cover w-auto h-full;
   }
-}
-
-.project-imgeven {
-  @apply relative col-[1_/_7] row-span-full z-10 rounded-sm before:content-[""] before:absolute before:w-full before:h-full before:z-[3] before:mix-blend-screen before:rounded-sm before:inset-0;
-}
-
-.project-contenteven {
-  @apply relative col-[6_/_-1] row-span-full z-10 ;
 }
 
 .proj {
@@ -511,6 +514,10 @@
 
 .socials {
   @apply w-full flex justify-around items-center;
+}
+
+.footer > div:nth-child(2) span {
+  @apply  py-3;
 }
 
 .formbg {

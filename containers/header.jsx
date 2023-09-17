@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <div className=" bg_head flex flex-1 justify-between items-center">
+    <div className=" bg_head head">
       <div className=" head_text ">
         <h3>Hi, my name is </h3>
         <h1 className="reveal">Lakshay Goyal</h1>

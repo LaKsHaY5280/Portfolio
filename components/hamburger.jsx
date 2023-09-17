@@ -25,7 +25,7 @@ const Hamburger = () => {
           <span></span>
           <span></span>
           <span></span>
-          <ul className=" md:hidden" id="menu">
+          <ul className=" max-md:hidden" id="menu">
             {navlinks.map((link) => (
               <li key={link.label} onClick={handleInputCheck}>
                 <a

@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex justify-center items-center">
           <Image src={l} alt="L" width={300} height={300} />
         </div>
-        <div className="flex justify-center items-center text-5xl text-slate-100">
+        <div className="flex justify-center items-center text-5xl text-slate-100 text-center">
           "Approches hurdles with empathy and grace"
         </div>
         <div className=" socials">
@@ -20,7 +20,8 @@ const Footer = () => {
         </div>
       </div>
       <div className=" text-secondary">
-        Handcrafted by me <u>Lakshay Goyal</u>
+        Handcrafted by me{" "}
+        <span className="animated_underline">Lakshay Goyal</span>
       </div>
     </div>
   );

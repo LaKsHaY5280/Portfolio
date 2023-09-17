@@ -1,5 +1,6 @@
 import logo from "./logo.png";
 import l from "./logo.svg";
+import pfp from "./pfp.png";
 import html from "./icons/html.png";
 import css from "./icons/css.png";
 import js from "./icons/js.png";
@@ -16,6 +17,7 @@ import expressjs240 from "./icons/expressjs240.png";
 export {
   logo,
   l,
+  pfp,
   html,
   css,
   js,

@@ -15,7 +15,7 @@ const Quotes = (props) => {
             />
           </span>
         </div>
-        <p className=" font-bold text-slate-100 text-5xl">{props.quote}</p>
+        <p className=" font-bold text-slate-100 text-5xl text-center">{props.quote}</p>
         <div className=" flex flex-1 justify-center text-7xl gap-5 text-secondary">
           <span className=" scale-x-[1] bounce">
             <Quote

@@ -1,18 +1,4 @@
-import {
-  logo,
-  html,
-  css,
-  js,
-  typescript,
-  react,
-  nextjs,
-  nodejs,
-  nodejs48,
-  nodejs240,
-  mongodb,
-  expressjs48,
-  expressjs240,
-} from "@/assets/images";
+import { logo, pfp } from "@/assets/images";
 import Image from "next/image";
 
 const About = () => {
@@ -21,7 +7,7 @@ const About = () => {
       id="about"
       className="bg_head py-5 text-slate-100 flex flex-1 justify-center items-center"
     >
-        <div className=" verticle_bg">ABOUT ME</div>
+      <div className=" verticle_bg">ABOUT ME</div>
       <div className=" about">
         <div className="">
           <div className=" header animated_underline">

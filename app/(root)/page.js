@@ -6,7 +6,7 @@ import AnimatedBg from "@/components/animatedBg";
 
 export default function Home() {
   return (
-    <main className=" font-kano">
+    <main className=" font-kano w-fit">
       <Navbar />
       <Header />
       <AnimatedBg />
