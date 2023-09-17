@@ -19,7 +19,7 @@
 .resume_btn,
 .resume_btn:link,
 .resume_btn:visited {
-  @apply text-secondary text-[1.3rem] tracking-widest uppercase min-w-[100px] max-w-[60%] relative transition-all duration-[0.2s] ease-[cubic-bezier(0.455,0.03,0.515,0.955)] mx-auto my-0 border-2 border-solid border-transparent;
+  @apply text-secondary text-[1.3rem] tracking-widest uppercase min-w-[100px] max-w-[60%] relative transition-all duration-[0.2s] ease-[cubic-bezier(0.455,0.03,0.515,0.955)] mx-auto my-0 border-2 border-solid border-transparent max-[500px]:text-lg;
 }
 .resume_btn:after,
 .resume_btn:before,
@@ -84,8 +84,7 @@
 }
 
 #menu {
-  @apply absolute w-[300px] mt-[-100px] ml-[-150px] list-none origin-[100%_0%] transition-transform duration-[0.5s] ease-[cubic-bezier(0.77,0.2,0.05,1)] mr-0 mb-0 pt-[125px] p-[50px];
-  background: #1c1c1c;
+  @apply absolute w-[300px] ml-[-150px] list-none origin-[100%_0%] transition-transform duration-[0.5s] ease-[cubic-bezier(0.77,0.2,0.05,1)] mt-6 p-[50px] formbg max-[500px]:mt-3;
   -webkit-font-smoothing: antialiased;
   /* Changed from '0% 0%' to '100% 0%' */
   transform: translate(100%, 0);
@@ -98,14 +97,10 @@
   transform: none;
 }
 
-
-
-
-
 }
 
 .bg_nav {
-  @apply relative font-thin overflow-y-hidden animate-[fadeIn_1s_ease-out] m-0;
+  @apply relative font-thin overflow-y-hidden animate-[fadeIn_1s_ease-out] m-0 overflow-hidden;
   background: rgb(63,0,113,0.5);
   background: -moz-radial-gradient(circle, rgba(63,0,113,1) 47%, rgba(28,28,28,1) 100%);
   background: -webkit-radial-gradient(circle, rgba(63,0,113,1) 47%, rgba(28,28,28,1) 100%);
@@ -238,12 +233,20 @@
   @apply absolute top-40 right-40 py-5 text-slate-100 text-5xl max-[1250px]:top-28 max-[1250px]:right-20 max-[1250px]:text-3xl max-[800px]:static;
 }
 
+.head_text h3 {
+  @apply max-[500px]:text-2xl;
+}
+
 .head_text h1 {
-  @apply py-5 inline-flex font-bold;
+  @apply py-5 inline-flex font-bold max-[500px]:text-4xl;
+}
+
+.head_text p {
+  @apply max-[500px]:text-xl;
 }
 
 .head_img img {
-  @apply  max-lg:h-[600px] max-lg:w-[600px] max-[800px]:h-[500px] ;
+  @apply  max-lg:h-[600px] max-lg:w-[600px] max-[800px]:w-[500px] max-[800px]:h-[500px] max-[300px]:w-[500px] max-[500px]:h-[300px] ;
 }
 
 .verticle_bg {
@@ -251,34 +254,34 @@
 }
 
 .animated_underline {
-  @apply relative after:content-[""] after:absolute after:bottom-[0.25em] after:h-px after:transition-all after:duration-[ease] after:delay-[0.2s] after:inset-x-2/4 hover:after:h-0.5 hover:after:inset-x-0 before:absolute before:-translate-x-full before:text-[#eee] before:opacity-30 before:font-thin before:text-[0.8em] before:-left-2.5;
+  @apply relative after:content-[""] after:absolute after:bottom-[0.5em] after:h-px after:transition-all after:duration-[ease] after:delay-[0.2s] after:inset-x-2/4 hover:after:h-0.5 hover:after:inset-x-0 before:absolute before:-translate-x-full before:text-[#eee] before:opacity-30 before:font-thin before:text-[0.8em] before:-left-2.5;
 }
 .animated_underline:after {
   background: currentColor;
 }
 
 .about {
-  @apply w-full flex flex-1 justify-between items-center max-lg:flex-col max-lg:pr-24 max-lg:overflow-hidden;
+  @apply w-full flex flex-1 justify-between items-center max-lg:flex-col max-lg:overflow-hidden;
 }
 
 .header {
-  @apply text-5xl font-bold py-5  text-slate-100;
+  @apply text-5xl font-bold py-5 text-slate-100 max-[500px]:text-3xl;
 }
 
 .about > div:nth-child(1) > div:nth-child(2)  {
-  @apply text-3xl font-semibold py-4;
+  @apply text-3xl font-semibold py-4 max-[500px]:text-xl;
 }
 
 .about > div {
-  @apply w-[inherit];
+  @apply w-full;
 }
 
 .about > div:nth-child(1) span {
-  @apply text-xl font-semibold py-3;
+  @apply text-xl font-semibold py-3 max-[500px]:text-base;
 }
 
 .about > div p {
-  @apply text-lg py-2;
+  @apply text-lg py-2 max-[500px]:text-sm;
 }
 
 .about > div p span {
@@ -286,7 +289,7 @@
 }
 
 .about > div:nth-child(2) {
-  @apply px-28;
+  @apply md:px-28;
 }
 
 .about_resume{
@@ -308,7 +311,7 @@
 }
 
 .skills {
-  @apply w-full flex justify-center items-center flex-col gap-10;
+  @apply w-full flex justify-center items-center flex-col gap-10 overflow-hidden;
 }
 
 .skills .verticle_bg {
@@ -378,15 +381,10 @@
   }
 }
 .project-content {
-  @apply relative col-[1_/_7] row-span-full z-10;
+  @apply relative col-[1_/_7] row-span-full z-10 max-[600px]:col-span-full max-[800px]:p-0;
 }
 .project-contenteven {
-  @apply relative col-[6_/_-1] row-span-full z-10 ;
-}
-@media (max-width: 600px) {
-  .project-content,.project-contenteven {
-    @apply col-span-full p-10;
-  }
+  @apply relative col-[6_/_-1] row-span-full z-10 max-[600px]:col-span-full max-[800px]:p-0;
 }
 .project-content .project-label,.project-contenteven .project-label {
   @apply text-primary font-semibold text-lg;

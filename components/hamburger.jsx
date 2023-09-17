@@ -25,12 +25,12 @@ const Hamburger = () => {
           <span></span>
           <span></span>
           <span></span>
-          <ul className=" max-md:hidden" id="menu">
+          <ul className=" md:hidden" id="menu">
             {navlinks.map((link) => (
               <li key={link.label} onClick={handleInputCheck}>
                 <a
                   className=" text-primary ham_transition hover:text-slate-200"
-                  onClick={() => router.push(link.url)}
+                  onClick={() => router.push("#" + link.url)}
                 >
                   {link.label}
                 </a>
