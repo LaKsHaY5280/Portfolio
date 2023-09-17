@@ -524,3 +524,20 @@
   @apply box-border shadow-[0_15px_25px_rgba(0,0,0,0.6)];
   background: rgba(0, 0, 0, 0.5);
 }
+
+.layout_social > div:nth-child(1) {
+  @apply flex justify-between items-end;
+}
+
+.layout_social > div:nth-child(1) {
+  @apply fixed bottom-0 z-10 w-full;
+}
+
+.layout_social > div:nth-child(1) > div:nth-child(1),
+.layout_social > div:nth-child(1) > div:nth-child(2) {
+  @apply flex justify-between items-center flex-col gap-5 px-8 after:bottom-0 after:content-[""] after:w-0.5 after:h-20 after:bg-primary;
+}
+
+.layout_social > div:nth-child(1) > div:nth-child(2) span {
+  writing-mode: vertical-rl;
+}
