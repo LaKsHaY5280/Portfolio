@@ -538,22 +538,22 @@
 }
 
 .layout_social {
-  @apply max-[800px]:hidden
+  @apply max-[800px]:hidden flex justify-between items-end fixed bottom-0 z-10 w-full;
 }
 
+
+.layout_social > div:nth-child(1),
+.layout_social > div:nth-child(2) {
+  @apply absolute flex justify-between items-center flex-col gap-5 px-8 after:bottom-0 after:content-[""] after:w-0.5 after:h-20 after:bg-primary;
+}
 .layout_social > div:nth-child(1) {
-  @apply flex justify-between items-end;
+  @apply left-5;
 }
 
-.layout_social > div:nth-child(1) {
-  @apply fixed bottom-0 z-10 w-full;
+.layout_social > div:nth-child(2) {
+  @apply right-5;
 }
 
-.layout_social > div:nth-child(1) > div:nth-child(1),
-.layout_social > div:nth-child(1) > div:nth-child(2) {
-  @apply flex justify-between items-center flex-col gap-5 px-8 after:bottom-0 after:content-[""] after:w-0.5 after:h-20 after:bg-primary;
-}
-
-.layout_social > div:nth-child(1) > div:nth-child(2) span {
+.layout_social > div:nth-child(2) span {
   writing-mode: vertical-rl;
 }
