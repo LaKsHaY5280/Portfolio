@@ -1,5 +1,6 @@
-import { logo, pic } from "@/assets/images";
+import { pic } from "@/assets/images";
 import Image from "next/image";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -50,7 +51,9 @@ const About = () => {
             vision.
           </p>
           <div className=" about_resume">
-            <button className="resume_btn">Resume</button>
+            <button className="resume_btn">
+              <Link href="/resume.pdf">Resume</Link>
+            </button>
           </div>
         </div>
         <div className="myimg">
