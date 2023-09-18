@@ -406,18 +406,18 @@
   }
 }
 .project-content .project-details ul,.project-contenteven .project-details ul {
-  @apply flex mt-5;
+  @apply flex mt-5 p-5;
 }
 .project-content .project-details ul li,.project-contenteven .project-details ul li {
   @apply text-[#aaa] mr-5;
   font-family: monospace;
 }
 .project-img {
-  @apply relative col-[6_/_-1] row-span-full rounded-sm before:content-[""] before:absolute before:w-full before:h-full before:z-[3] before:mix-blend-screen before:rounded-sm before:inset-0;
+  @apply  w-full flex justify-center items-center relative col-[6_/_-1] row-span-full rounded-sm before:content-[""] before:absolute before:w-full before:h-full before:z-[3] before:mix-blend-screen before:rounded-sm before:inset-0;
 }
 
 .project-imgeven {
-  @apply relative col-[1_/_7] row-span-full z-10 rounded-sm before:content-[""] before:absolute before:w-full before:h-full before:z-[3] before:mix-blend-screen before:rounded-sm before:inset-0;
+  @apply  w-full flex justify-center items-center relative col-[1_/_7] row-span-full z-10 rounded-sm before:content-[""] before:absolute before:w-full before:h-full before:z-[3] before:mix-blend-screen before:rounded-sm before:inset-0;
 }
 
 @media screen and (max-width: 768px) {
@@ -431,7 +431,7 @@
   }
 }
 .project-img img,.project-imgeven img {
-  @apply relative rounded-sm;
+  @apply relative rounded-sm h-[inherit];
 }
 @media screen and (max-width: 768px) {
   .project-img img,.project-imgeven img {

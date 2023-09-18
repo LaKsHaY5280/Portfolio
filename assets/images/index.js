@@ -13,6 +13,9 @@ import nodejs240 from "./icons/nodejs240.png";
 import mongodb from "./icons/mongodb.png";
 import expressjs48 from "./icons/expressjs48.png";
 import expressjs240 from "./icons/expressjs240.png";
+import ssthreads from "./projects/ssthreads.png";
+import ssgericht from "./projects/ssgericht.png";
+import ssnike from "./projects/ssnike.png";
 
 export {
   logo,
@@ -30,4 +33,7 @@ export {
   mongodb,
   expressjs48,
   expressjs240,
+  ssthreads,
+  ssgericht,
+  ssnike
 };
