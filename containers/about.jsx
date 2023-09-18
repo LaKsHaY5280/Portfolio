@@ -1,4 +1,4 @@
-import { logo, pfp } from "@/assets/images";
+import { logo, pic } from "@/assets/images";
 import Image from "next/image";
 
 const About = () => {
@@ -53,8 +53,9 @@ const About = () => {
             <button className="resume_btn">Resume</button>
           </div>
         </div>
-        <div className="myImg">
-          <Image src={logo} alt="logo" width={1000} />
+        <div className="myimg">
+          <Image src={pic} alt="logo" width={1000} />
+          <p>*Image will be changed later*</p>
         </div>
       </div>
     </div>

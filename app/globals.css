@@ -296,9 +296,9 @@
   @apply px-4 my-10 max-lg:px-7;
 }
 
-/* .my_img {
-  @apply max-lg:w-fit
-} */
+.myimg p{
+  @apply text-right !text-sm;
+}
 
 .lang_icons {
   @apply p-4 flex flex-wrap justify-around items-center content-between gap-10;

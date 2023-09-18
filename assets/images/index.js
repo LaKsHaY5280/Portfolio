@@ -1,6 +1,8 @@
 import logo from "./logo.png";
 import l from "./logo.svg";
 import pfp from "./pfp.png";
+import pic from "./pic.jpg";
+import pic2 from "./pic2.jpg";
 import html from "./icons/html.png";
 import css from "./icons/css.png";
 import js from "./icons/js.png";
@@ -21,6 +23,8 @@ export {
   logo,
   l,
   pfp,
+  pic,
+  pic2,
   html,
   css,
   js,
@@ -35,5 +39,5 @@ export {
   expressjs240,
   ssthreads,
   ssgericht,
-  ssnike
+  ssnike,
 };
