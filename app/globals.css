@@ -448,7 +448,7 @@
 }
 
 .contact {
-  @apply w-full flex flex-1 justify-between items-center text-slate-100 pl-20;
+  @apply w-full flex flex-1 justify-between items-center text-slate-100 min-[800px]:pl-14;
 }
 
 .contact > div:nth-child(2) > div:nth-child(2)  {
