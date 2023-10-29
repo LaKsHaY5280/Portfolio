@@ -7,6 +7,7 @@ const Form = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
 
   const [state, handleSubmit] = useForm("meqbzzor");
 
@@ -15,7 +16,11 @@ const Form = () => {
       setName("");
       setEmail("");
       setMessage("");
-      // return <p>Thanks for joining!</p>;
+      setShowPopup(true);
+
+      setTimeout(() => {
+        setShowPopup(false);
+      }, 3000); // 3 seconds
     }
   }, [state.succeeded]);
 
@@ -29,6 +34,7 @@ const Form = () => {
             name="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            required
           />
           <label htmlFor="name">Name</label>
         </div>
@@ -39,6 +45,7 @@ const Form = () => {
             name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
           <label htmlFor="email">Email</label>
           <ValidationError prefix="Email" field="email" errors={state.errors} />
@@ -51,6 +58,7 @@ const Form = () => {
             name="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
+            required
           />
           <label>Message</label>
           <ValidationError
@@ -66,6 +74,20 @@ const Form = () => {
           <span></span>
           Submit
         </button>
+        {showPopup && (
+          <div className=" absolute top-0 w-full h-5/6 flex justify-center items-center">
+            <div className=" flex justify-between items-center box-border shadow-[0_15px_25px_rgba(0,0,0,0.6)] p-5 rounded-[10px] bg-black bg-opacity-50">
+              <p className="text-white text-xl">Thanks for contacting😊!</p>
+              <button
+                type="button"
+                onClick={() => setShowPopup(false)}
+                className=" !mt-0 mb-10 ml-5"
+              >
+                X
+              </button>
+            </div>
+          </div>
+        )}
       </form>
     </div>
   );
